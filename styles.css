@@ -1,0 +1,56 @@
+.outer-shell {
+    border:1px solid white;
+    background-color:black;
+    display:flex;
+    flex-direction:column;
+    width:400px;
+}
+
+.screen {
+    border:1px solid white;
+    height:125px;
+    width:90%;
+    margin:5%
+}
+
+.calc-text {
+    color:white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size:x-large;
+    text-align:center;
+    justify-content:center;
+    display:flex;
+    flex-direction:column;
+}
+
+.button-row {
+    display:flex;
+    justify-content: space-evenly;
+}
+
+.button {
+    border:1px solid white;
+    width:5vh;
+    height:5vh;
+    border-radius:50%;
+}
+
+.double-button {
+    border:1px solid white;
+    width:13vh;
+    height:5vh;
+    border-radius:50%;
+}
+
+.num-button {
+    background-color:#343536;
+}
+
+.op-button {
+    background-color:#edac15;
+}
+
+.utility-button {
+    background-color:#b3b3b3;
+    color:black;
+}
