@@ -1,56 +1,73 @@
-.outer-shell {
+
+body {
+    display:flex;
+    width:100vw;
+    height:100vh;
+    justify-content:center;
+    align-items:center;
+    overflow:hidden;
+    background-color:#343536;
+}
+
+.calculator {
     border:1px solid white;
     background-color:black;
     display:flex;
     flex-direction:column;
     width:400px;
+    gap:10px; 
+    padding:20px;
+    border-radius:15px; 
 }
 
-.screen {
+.calculator__screen {
     border:1px solid white;
     height:125px;
     width:90%;
-    margin:5%
-}
-
-.calc-text {
+    margin:5%;
     color:white;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size:x-large;
-    text-align:center;
-    justify-content:center;
+    font-size:36px;
     display:flex;
-    flex-direction:column;
+    justify-content:flex-end;
+    align-items:center;
+    padding:5px;
 }
 
 .button-row {
     display:flex;
-    justify-content: space-evenly;
+    gap:10px;
 }
 
 .button {
+    display:flex;
+    align-items:center;
+    justify-content:center;
     border:1px solid white;
     width:5vh;
     height:5vh;
-    border-radius:50%;
+    border-radius:20px;
+    flex-basis:25%;
+    padding:0;
+    color:white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size:x-large;
+    text-align:center;    
 }
 
-.double-button {
-    border:1px solid white;
-    width:13vh;
-    height:5vh;
-    border-radius:50%;
+.button--double {
+    width:50%;
+    flex-basis:50%;
 }
 
-.num-button {
+.button--num {
     background-color:#343536;
 }
 
-.op-button {
+.button--op {
     background-color:#edac15;
 }
 
-.utility-button {
+.button--utility {
     background-color:#b3b3b3;
     color:black;
 }
