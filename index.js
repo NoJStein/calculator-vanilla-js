@@ -13,64 +13,8 @@ function init() {
     }
 
     function isDecimal(num) {
-
-        if (num.indexOf(".")) {
-            return true;
-        }
-        return false;
-
+        return num.indexOf(".") !== -1;
     }
-
-    function rounding(num) {
-        let zeroCount = 0;
-        let wasNine = false;
-
-        console.log("29 The number to round is ", num);        //Test
-
-        if (isDecimal(num)) {
-            console.log("32 Decimal Here")     //Test
-
-            for (let i = num.length - 1; i > -1; i--) {
-                console.log("35 current num = ", num[i]);      //Test
-                //console.log("36 zeroCount = ", zeroCount);     //Test
-
-                /*
-                                if (num[i] !== '0' && zeroCount > 1) {
-                    console.log("39 trimming")
-                    zeroCount = 0;
-                    num = num.substring(0, (i + 1));
-                    console.log(num);       //Test
-                } else if (num[i] === '0') {
-                    console.log("44 num[i] = ", num[i]);        //Test
-                    console.log("45 zeroCount = ", zeroCount);     //Test
-                    zeroCount++;
-                }
-                */
-
-                 /* else if (wasNine) {
-                    console.log("55 wasNine = ", wasNine);      //Test
-                    console.log("56 num[i] = ", num[i]);        //Test
-                    //let temp = parseInt(num[i]);
-                    //temp++;
-                    let charCode = num.charCodeAt(i);
-                    charCode += 1;
-                    let incrementedChar = String.fromCharCode(charCode);
-                    console.log(incrementedChar);       //Test
-
-
-                    console.log("58 num[i] = ", num[i]);        //Test
-                    wasNine = false;
-                }
-                */
-
-            }
-        }
-
-        console.log("final number is ", num);       //Test
-
-        return num;
-    }
-    
 
     const numberButtons = document.querySelectorAll('.button--num');
     numberButtons.forEach(button => {
