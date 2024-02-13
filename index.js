@@ -51,39 +51,7 @@ function init() {
 
         let answer = 0;
 
-        /*
-        if (isDecimal(screen.dataset.hold) || isDecimal(screen.innerHTML)) {
-            switch (screen.dataset.operation) {
-                case "plus":
-                    answer = `${parseFloat(screen.dataset.hold) + parseFloat(screen.innerHTML)}`;
-                    break;
-    
-                case "minus":
-                    answer = `${parseFloat(screen.dataset.hold) - parseFloat(screen.innerHTML)}`;
-                    break;
-                
-                case "multiply":
-                    answer = `${parseFloat(screen.dataset.hold) * parseFloat(screen.innerHTML)}`;
-                    break;
-            }
-        } else {
-            switch (screen.dataset.operation) {
-                case "plus":
-                    answer = `${parseInt(screen.dataset.hold) + parseInt(screen.innerHTML)}`;
-                    break;
-    
-                case "minus":
-                    answer = `${parseInt(screen.dataset.hold) - parseInt(screen.innerHTML)}`;
-                    break;
-                
-                case "multiply":
-                    answer = `${parseInt(screen.dataset.hold) * parseInt(screen.innerHTML)}`;
-                    break;
-            }
-        }
-        */
-
-        let parse = isDecimal(screen.dataset.hold) || isDecimal(screen.innerHTML) ? parseFloat: parseInt;
+        let parse = isDecimal(screen.dataset.hold) || isDecimal(screen.innerHTML) ? parseFloat : parseInt;
 
         switch (screen.dataset.operation) {
             case "plus":
@@ -103,28 +71,11 @@ function init() {
                     console.log("Attempted division by zero!");
                     break;
                 } else {
-                    answer = `${parse(screen.dataset.hold) / parse(screen.innerHTML)}`
+                    answer = `${parseFloat(screen.dataset.hold) / parseFloat(screen.innerHTML)}`
                     break;
                 }
             
         }
-
-        /*
-        switch (screen.dataset.operation) {
-            case "divide":
-                if (screen.innerHTML === '0') {
-                    //answer = 'ERROR';
-                    console.log("Attempted division by zero!");
-                    break;
-                } else {
-                    answer = `${parseFloat(screen.dataset.hold) / parseFloat(screen.innerHTML)}`;
-                }
-                 
-        }
-        */
-
-        
-        
 
         // Update the screen with the new answer
         //rounding(answer);
