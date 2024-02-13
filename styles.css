@@ -74,4 +74,5 @@ body {
 .button--utility {
     background-color:#b3b3b3;
     color:black;
+    flex-basis:75%;
 }
