@@ -16,10 +16,13 @@ function init() {
     }
 
     function isDecimal(num) {
-        for (i of num) {
-            if (i === '.') {return true}
+        if (num.indexOf(".")) {
+            //console.log("Is a decimal")     //Test
+            return true;
         }
+        //console.log("Not a decimal")        //Test
         return false;
+
     }
 
     function rounding(num) {
