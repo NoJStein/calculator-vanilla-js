@@ -1,3 +1,4 @@
+const LIMIT = 20;
 
 function init() {
 
@@ -5,13 +6,9 @@ function init() {
     console.log(screen);
 
     function limitCheck() {
-        //console.log(screen.innerHTML.toString().length);    //Test
-
-        let limit = 20;
-
-        if (screen.innerHTML.toString().length > limit) {
+        if (screen.innerHTML.toString().length > LIMIT) {
             console.log("overflow!")
-            screen.innerHTML = screen.innerHTML.substring(0, limit);
+            screen.innerHTML = screen.innerHTML.substring(0, LIMIT);
         }
     }
 
