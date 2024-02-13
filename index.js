@@ -1,3 +1,4 @@
+
 const LIMIT = 20;
 
 function init() {
@@ -15,7 +16,7 @@ function init() {
     function isDecimal(num) {
         return num.indexOf(".") !== -1;
     }
-
+    
     const numberButtons = document.querySelectorAll('.button--num');
     numberButtons.forEach(button => {
         button.addEventListener('click', () => {
@@ -38,8 +39,6 @@ function init() {
             screen.dataset.state = "second";
             screen.dataset.operation = button.dataset.operation;
             screen.innerHTML = "0";
-            //console.log(button.dataset.operation);
-            //console.log(screen.dataset);    //Test
         })
     })
     
@@ -75,11 +74,11 @@ function init() {
                     break;
                 }
             
-        }
+        }      
 
         // Update the screen with the new answer
         //rounding(answer);
-        screen.innerHTML = rounding(answer);
+        screen.innerHTML = answer;
         limitCheck();
         // Update the hold with the new answer
         screen.dataset.hold = answer;
@@ -96,20 +95,6 @@ function init() {
 
         console.log(screen.dataset);
     })
-
-/*
-    const decimalButton = document.querySelector('.button--decimal');
-    decimalButton.addEventListener('click', () => {
-        console.log("STOP CLICKING ME!");   //Test
-        for (i of screen.innerHTML) {
-            console.log(i);
-            if (i === '.') {return}
-        }
-        screen.innerHTML += decimalButton.dataset.value;
-        
-    })
-*/
-
 
 }
 
