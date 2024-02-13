@@ -110,6 +110,7 @@ function init() {
 
         let answer = 0;
 
+        /*
         if (isDecimal(screen.dataset.hold) || isDecimal(screen.innerHTML)) {
             switch (screen.dataset.operation) {
                 case "plus":
@@ -139,7 +140,35 @@ function init() {
                     break;
             }
         }
+        */
 
+        let parse = isDecimal(screen.dataset.hold) || isDecimal(screen.innerHTML) ? parseFloat: parseInt;
+
+        switch (screen.dataset.operation) {
+            case "plus":
+                answer = `${parse(screen.dataset.hold) + parse(screen.innerHTML)}`;
+                break;
+
+            case "minus":
+                answer = `${parse(screen.dataset.hold) - parse(screen.innerHTML)}`
+                break;
+
+            case "multiply":
+                answer = `${parse(screen.dataset.hold) * parse(screen.innerHTML)}`
+                break;
+
+            case "divide":
+                if (screen.innerHTML === '0') {
+                    console.log("Attempted division by zero!");
+                    break;
+                } else {
+                    answer = `${parse(screen.dataset.hold) / parse(screen.innerHTML)}`
+                    break;
+                }
+            
+        }
+
+        /*
         switch (screen.dataset.operation) {
             case "divide":
                 if (screen.innerHTML === '0') {
@@ -151,6 +180,7 @@ function init() {
                 }
                  
         }
+        */
 
         
         
