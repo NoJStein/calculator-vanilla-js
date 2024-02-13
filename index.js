@@ -16,11 +16,10 @@ function init() {
     }
 
     function isDecimal(num) {
+
         if (num.indexOf(".")) {
-            //console.log("Is a decimal")     //Test
             return true;
         }
-        //console.log("Not a decimal")        //Test
         return false;
 
     }
